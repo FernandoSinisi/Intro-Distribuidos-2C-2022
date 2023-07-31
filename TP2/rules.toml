@@ -1,0 +1,15 @@
+# rules may be specified multiple times
+
+[[rule1]]
+# blocked port
+dst_port = 80
+
+# host can't access the given port using the specified protocol
+[[rule2]]
+src_host = "00-00-00-00-00-01"
+dst_port = 5001
+proto = "UDP"
+
+[[rule3]]
+# hosts which can't communicate with each other: you may specify more than 2
+hosts = ["00-00-00-00-00-02", "00-00-00-00-00-04"]
